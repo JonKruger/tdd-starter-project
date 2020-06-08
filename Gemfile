@@ -1,3 +1,11 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
+ruby "2.6.1"
 
-gem 'rspec'
+group :development do
+  gem 'guard'
+end
+
+group :test do
+  gem "rspec"
+  gem "guard-rspec", require: false
+end
